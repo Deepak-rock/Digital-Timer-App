@@ -47,7 +47,7 @@ class DigitalTimer extends Component {
           -
         </button>
         <div className="timer-set">
-          <h2 className="time">{timerLimitInMintes}</h2>
+          <p className="time">{timerLimitInMintes}</p>
         </div>
         <button
           className="add-button"
@@ -81,11 +81,8 @@ class DigitalTimer extends Component {
   }
 
   onStartorPauseTimer = () => {
-    const {
-      timerLimitInMintes,
-      timeElapsedInSeconds,
-      isTimerStarted,
-    } = this.state
+    const {timerLimitInMintes, timeElapsedInSeconds, isTimerStarted} =
+      this.state
     const isTimerCompeleted = timeElapsedInSeconds === timerLimitInMintes * 60
     if (isTimerCompeleted) {
       this.setState({timeElapsedInSeconds: 0})
@@ -107,36 +104,32 @@ class DigitalTimer extends Component {
 
     return (
       <div className="start-reset-container">
-        <div className="start-paused-container">
-          <button
-            className="start-paused-button"
-            type="button"
-            onClick={this.onStartorPauseTimer}
-          >
-            <img
-              src={playPausedImg}
-              alt={playPausedAlt}
-              className="start-pause-icon"
-            />
-          </button>
+        <button
+          className="start-paused-button"
+          type="button"
+          onClick={this.onStartorPauseTimer}
+        >
+          <img
+            src={playPausedImg}
+            alt={playPausedAlt}
+            className="start-pause-icon"
+          />
           <p className="start-pause-text">
-            {isTimerStarted ? 'Paused' : 'Start'}
+            {isTimerStarted ? 'Pause' : 'Start'}
           </p>
-        </div>
-        <div className="reset-container">
-          <button
-            className="reset-button"
-            type="button"
-            onClick={this.onResetTimer}
-          >
-            <img
-              src="https://assets.ccbp.in/frontend/react-js/reset-icon-img.png "
-              alt="reset icon"
-              className="reset-icon"
-            />
-          </button>
+        </button>
+        <button
+          className="reset-button"
+          type="button"
+          onClick={this.onResetTimer}
+        >
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/reset-icon-img.png "
+            alt="reset icon"
+            className="reset-icon"
+          />
           <p className="reset-text">Reset</p>
-        </div>
+        </button>
       </div>
     )
   }
@@ -156,7 +149,6 @@ class DigitalTimer extends Component {
 
   render() {
     const {isTimerStarted} = this.state
-    const labelText = isTimerStarted ? 'Running' : 'Paused'
     return (
       <div className="app-container">
         <div className="timer-container">
@@ -167,7 +159,9 @@ class DigitalTimer extends Component {
                 <h2 className="timer">
                   {this.getElapsedSecondsInTimeFormat()}
                 </h2>
-                <p className="paused-running">{labelText}</p>
+                <p className="paused-running">
+                  {isTimerStarted ? 'Running' : 'Paused'}
+                </p>
               </div>
             </div>
             <div className="startreset-timerset-container">

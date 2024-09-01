@@ -59,12 +59,10 @@
   display: flex;
   justify-content: space-around;
 }
-.start-paused-container {
-  display: flex;
-  align-items: center;
-}
 .start-paused-button {
   background-color: transparent;
+  display: flex;
+  align-items: center;
   border: none;
   outline: none;
   cursor: pointer;
@@ -79,15 +77,13 @@
   font-weight: bold;
   color: #1e293b;
 }
-.reset-container {
-  display: flex;
-  align-items: center;
-}
 .reset-button {
   background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 .reset-icon {
   width: 50px;
