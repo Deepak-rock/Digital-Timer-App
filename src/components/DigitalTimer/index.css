@@ -1,1 +1,200 @@
 /* Write your CSS here */
+*{
+    margin: 0;
+}
+.app-container{
+    background-image: linear-gradient(#ffffff,#cffcf1,#defafe);
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timer-container{
+    width: 100%;
+    max-width: 1200px;
+}
+.heading{
+    font-family: 'Roboto';
+    text-align: center;
+    margin: 20px 0 0 0;
+    font-size: 32px;
+    font-weight: bold;
+    color:  #1e293b;
+}
+.timer-running-container{
+    background-image: url("https://assets.ccbp.in/frontend/react-js/digital-timer-elapsed-bg.png");
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    background-size: cover;
+}
+.timer-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+.timer{
+    color: #00d9f5;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Roboto';
+}
+.paused-running{
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: bold;
+    color:  #1e293b;
+    margin: 10px 0;
+}
+.start-reset-container{
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.start-paused-container{
+    display: flex;
+    align-items: center;
+}
+.start-paused-button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.start-pause-icon{
+    width: 50px;
+    height: 50px;
+}
+.start-pause-text{
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color:  #1e293b;
+}
+.reset-container{
+    display: flex;
+    align-items: center;
+}
+.reset-button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.reset-icon{
+    width: 50px;
+    height: 50px;
+}
+.reset-text{
+    font-family: 'Roboto';
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color:  #1e293b;
+}
+.description{
+    font-family: 'Roboto';
+    text-align: center;
+    margin: 20px 0;
+    font-size: 14px;
+    font-weight: bold;
+    color:  #1e293b;
+}
+.set-timer-container{
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.minus-button{
+    font-family: 'Roboto';
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 60px;
+    margin: 0 0 0 10px;
+    cursor: pointer;
+}
+.timer-set{
+    background-image: linear-gradient(to right, #00f5a0,#00d9f5);
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+.add-button{
+    font-family: 'Roboto';
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 60px;
+    color: #0f172a;
+    margin: 0 10 0 0px;
+    cursor: pointer;
+}
+.time{
+    font-family: 'Roboto';
+    font-size: 26px;
+    font-weight: bold;
+    color:  #1e293b;
+}
+@media screen and (min-width:768px){
+    .app-container{
+        background-image: linear-gradient(to right,#ffffff,#cffcf1, #defafe); 
+        flex-direction: column;
+    }
+    .heading{
+        font-size: 42px;
+    }
+    .responsive-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .timer-running-container{
+        width: 50%;
+    }
+    .timer-card{
+        padding: 50px;
+    }
+    .timer{
+        font-size: 38px;
+    }
+    .paused-running{
+        font-size: 24px;
+    }
+    .startreset-timerset-container{
+        width: 30%;
+    }
+    .start-reset-container{
+        width: 100%;
+    }
+    .start-pause-icon{
+        width: 60px;
+        height: 60px;
+    }
+    .start-pause-text{
+        font-size: 26px;
+    }
+    .reset-icon{
+        margin: 0 0 0 20px;
+        width: 60px;
+        height: 60px;
+    }
+    .reset-text{
+        font-size: 26px;
+    }
+    .set-timer-container{
+        width: 100%;
+    }
+    .description{
+        font-size: 18px;
+        margin: 20px 0 20px 50px;
+    }
+}
